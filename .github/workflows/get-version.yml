@@ -2,7 +2,7 @@ name: Get Project Version
 on:
   push:
     branches:
-      - main
+      - master
  
 jobs:
   get-version:
