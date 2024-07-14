@@ -21,4 +21,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Utilisation de la variable "var" dans un autre job
-        run: echo ${{ vars.MA_VAR }}
+        run: echo ${{ secrets.API_KEY }}
