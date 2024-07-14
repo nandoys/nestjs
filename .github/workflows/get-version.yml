@@ -1,0 +1,24 @@
+name: Get Project Version
+on:
+  push:
+    branches:
+      - main
+ 
+jobs:
+  get-version:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+ 
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Définir une variable dans les "vars"
+        run: echo "::set-var name=MA_VAR::ma-valeur"
+
+  un-autre-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Utilisation de la variable "var" dans un autre job
+        run: echo ${{ vars.MA_VAR }}

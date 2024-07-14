@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - '*'
-
+    
 jobs:
   my-job:
     runs-on: ubuntu-latest
@@ -12,3 +12,4 @@ jobs:
     steps:
       - name: Mon Job Simple
         run: echo "Mon premier workflow sur GitHub Actions"
+
